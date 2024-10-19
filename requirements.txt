@@ -1,0 +1,9 @@
+numpy
+pillow
+streamlit
+torch
+transformers
+pinecone
+cohere
+pdfplumber
+google
