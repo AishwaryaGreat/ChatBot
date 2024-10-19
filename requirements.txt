@@ -7,3 +7,4 @@ pinecone
 cohere
 pdfplumber
 google
+sentence_transformers
