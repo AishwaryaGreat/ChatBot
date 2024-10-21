@@ -1,4 +1,5 @@
-# QA Bot with Retrieval-Augmented Generation (RAG) and Interactive Interface
+## QA Bot with Retrieval-Augmented Generation (RAG)
+Interface
 
 This project demonstrates a Retrieval-Augmented Generation (RAG) model for a Question Answering (QA) bot, utilizing Pinecone DB for vector storage and the Cohere API for generative responses. Additionally, it features an interactive frontend built with Streamlit, allowing users to upload PDF documents and ask questions based on their content.
 
@@ -32,39 +33,6 @@ Develop an interactive interface allowing users to upload documents and ask ques
 - **Deployed QA Bot**: Frontend interface with document upload and interaction capabilities.
 - **Documentation**: Guides users on uploading files, asking questions, and viewing responses.
 - **Example Interactions**: Demonstrates the bot's functionality.
-
-## Docker Deployment
-
-### Steps
-
-1. **Create the Dockerfile**:
-    ```sh
-    New-Item -Path . -Name "Dockerfile" -ItemType "file"
-    ```
-
-2. **Edit the Dockerfile**:
-    ```dockerfile
-    FROM python:3.9-slim
-
-    # Install necessary Python libraries
-    RUN pip install pinecone-client cohere transformers streamlit PyPDF2
-
-    # Set the working directory inside the container
-    COPY . /app
-    WORKDIR /app
-
-    # Command to run the Streamlit app
-    CMD ["streamlit", "run", "app.py"]
-    ```
-
-3. **Build and Run the Docker Container**:
-    ```sh
-    docker build -t qa-bot .
-    docker run -p 8501:8501 qa-bot
-    ```
-
-### Access the Application
-Once the Docker container is running, you can access the QA bot in your browser at [http://localhost:8501](http://localhost:8501).
 
 ## General Guidelines
 1. **Modular and Scalable Code**: Follow best practices for both frontend and backend development.
